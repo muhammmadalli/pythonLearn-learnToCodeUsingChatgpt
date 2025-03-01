@@ -1,5 +1,5 @@
 import tkinter as tk
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # Function to calculate the number of days between two dates
 def calculate_days():
@@ -11,8 +11,8 @@ def calculate_days():
         date1 = datetime.strptime(date1_str, '%m/%d/%Y')
         date2 = datetime.strptime(date2_str, '%m/%d/%Y')
 
-        # Calculate the absolute difference in days between the two dates
-        delta = abs(date2 - date1)
+        # Calculate the absolute difference in days between the two dates and subtract 1
+        delta = abs(date2 - date1) + timedelta(days=1)
 
         # Update the result label with the number of days
         result_label.config(text=f'Number of Days: {delta.days}')
