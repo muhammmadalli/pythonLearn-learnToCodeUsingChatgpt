@@ -1,4 +1,4 @@
-This repo contains all the exercises done during the course *LEARN TO CODE USING CHATGPT* done on Quantic.\
+This repo contains all the exercises done during the course **LEARN TO CODE USING CHATGPT** done on *Quantic*.\
 \
 ChatGPT can be a tool of astronomical assistance for programmers - with the right prompt.\
 \
