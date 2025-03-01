@@ -8,3 +8,11 @@ LEARN TO CODE USING CHATGPT - Unlock the synergy between coding and natural lang
 \
 Here is the link to take on the course offered for free by Quantic School of Business and Technology.\
 https://app.quantic.edu/course/learn-to-code-using-chatgpt/fe3304f1-8733-4d74-b130-cc806a8f090d\
+\
+\
+*This repo only contains exercise 5 onwards codes*\
+Links to previous exercises are appended below: -\
+https://github.com/muhammmadalli/learnPython-HelloWorld - **Exercise 1**\
+https://github.com/muhammmadalli/learnPython-SortExpensesAndSumThem - **Exercise 2**\
+https://github.com/muhammmadalli/learnPython-websiteLivenessCheck - **Exercise 3**\
+https://github.com/muhammmadalli/learnPython-extractSentencesHavingAKeyword - **Exercise 4**\
