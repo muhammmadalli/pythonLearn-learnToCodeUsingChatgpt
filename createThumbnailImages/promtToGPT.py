@@ -1,12 +1,12 @@
 import os
 from PIL import Image
 
-def create_thumbnails(input_dir: str, output_dir: str = "thumbnails", size: tuple = (50, 50)):
+def create_thumbnails(input_dir: str, output_dir: str, size: tuple = (50, 50)):
     """
     Creates 50x50 pixel thumbnails for all image files in the specified directory.
     
     :param input_dir: Directory containing image files.
-    :param output_dir: Directory to save thumbnails. Defaults to "thumbnails".
+    :param output_dir: Directory to save thumbnails.
     :param size: Tuple indicating the size of thumbnails. Defaults to (50, 50).
     """
     if not os.path.exists(output_dir):
@@ -25,5 +25,6 @@ def create_thumbnails(input_dir: str, output_dir: str = "thumbnails", size: tupl
             print(f"Skipping {file_name}: {e}")
 
 if __name__ == "__main__":
-    input_directory = "images"  # Change this to your image directory
-    create_thumbnails(input_directory)
+    input_directory = input("Enter the input directory: ")
+    output_directory = input("Enter the output directory: ")
+    create_thumbnails(input_directory, output_directory)
