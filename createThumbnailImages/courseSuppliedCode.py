@@ -1,24 +1,52 @@
 import os
+import tkinter as tk
+from tkinter import filedialog
 from PIL import Image
 
-# Set the input and output directories
-input_directory = "images/"
-output_directory = "thumbnails_provide_code/"
+# Function to create thumbnails
+def create_thumbnails():
+    input_directory = input_dir_entry.get()
+    output_directory = output_dir_entry.get()
+    
+    # Ensure the output directory exists
+    os.makedirs(output_directory, exist_ok=True)
+    
+    for filename in os.listdir(input_directory):
+        if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')):
+            try:
+                with Image.open(os.path.join(input_directory, filename)) as img:
+                    img.thumbnail((50, 50))
+                    img.save(os.path.join(output_directory, filename))
+                    status_label.config(text=f"Thumbnail created for: {filename}")
+            except Exception as e:
+                status_label.config(text=f"Error processing {filename}: {str(e)}")
 
-# Ensure the output directory exists
-os.makedirs(output_directory, exist_ok=True)
+# Create the main GUI window
+root = tk.Tk()
+root.title("Thumbnail Creator")
 
-# Loop through each file in the input directory
-for filename in os.listdir(input_directory):
-    # Check if the file is an image (you can add more image extensions if needed)
-    if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')):
-        try:
-            # Open the image using Pillow
-            with Image.open(os.path.join(input_directory, filename)) as img:
-                # Resize the image to 50x50 pixels while maintaining aspect ratio
-                img.thumbnail((50, 50))
-                # Save the thumbnail in the output directory
-                img.save(os.path.join(output_directory, filename))
-                print(f"Thumbnail created for: {filename}")
-        except Exception as e:
-            print(f"Error processing {filename}: {str(e)}")
+# Input directory selection
+input_dir_label = tk.Label(root, text="Select Input Directory:")
+input_dir_label.pack()
+input_dir_entry = tk.Entry(root, width=50)
+input_dir_entry.pack()
+input_dir_button = tk.Button(root, text="Browse", command=lambda: input_dir_entry.insert(0, filedialog.askdirectory()))
+input_dir_button.pack()
+
+# Output directory selection
+output_dir_label = tk.Label(root, text="Select Output Directory:")
+output_dir_label.pack()
+output_dir_entry = tk.Entry(root, width=50)
+output_dir_entry.pack()
+output_dir_button = tk.Button(root, text="Browse", command=lambda: output_dir_entry.insert(0, filedialog.askdirectory()))
+output_dir_button.pack()
+
+# Create thumbnails button
+create_button = tk.Button(root, text="Create Thumbnails", command=create_thumbnails)
+create_button.pack()
+
+# Status label to display messages
+status_label = tk.Label(root, text="")
+status_label.pack()
+
+root.mainloop()
