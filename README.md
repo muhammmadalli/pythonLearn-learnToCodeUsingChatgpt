@@ -38,3 +38,14 @@ pyinstall is dead, long live pip!: [text](https://ianbicking.org/blog/2008/10/py
 
 ### Prompt - Question Refinement by asking ChatGPT
 I want an app that *does some function*. Tell me what I should include in my prompt to you. Don't write any code at this point.
+
+# NOTES ON OOP
+1. **CONTRUCTOR** creates an instance, or object which was not previously there.
+2. **ATTRIBUTES** contain data in the class.
+3. **METHODS** work on and manipulate the attributes.
+4. **CLASS** is like a blueprint or a template for creating objects. It defines the structure and behavior that its objects will have. It has both *attributes* and *methods*.
+5. **OBJECT** is an instance of a class. A *working thing* made by using the class.
+    1. They are made/created using *CONSTRUCTORS*.
+    2. Once you have created an object, you can access its attributes and call its methods.
+
+**In summary**, classes are a way to define the structure and behavior of objects in OOP (Python). They encapsulate data (attributes) and functions (methods) into a single unit, making it easier to work with complex data and behaviors in your programs. One can create multiple objects from the same class, each with its own set of attributes and the ability to perform actions defined by the class methods.
