@@ -40,9 +40,36 @@ def install_package():
     
     threading.Thread(target=run_install, daemon=True).start()
 
+
+def show_installed_packages():
+    output_text.insert(tk.END, "\nFetching installed packages...\n")
+    output_text.yview(tk.END)
+
+    def run_list():
+        try:
+            process = subprocess.Popen(
+                ["pip", "list"],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True
+            )
+
+            output_text.insert(tk.END, "Installed Packages:\n")
+            for line in process.stdout:
+                output_text.insert(tk.END, line)
+                output_text.yview(tk.END)
+
+        except Exception as e:
+            output_text.insert(tk.END, f"\nError: {str(e)}\n")
+            messagebox.showerror("Exception", str(e))
+
+    threading.Thread(target=run_list, daemon=True).start()
+
+
+# GUI Setup
 root = tk.Tk()
 root.title("Pip GUI Installer")
-root.geometry("500x400")
+root.geometry("500x450")
 
 tk.Label(root, text="Enter package name:").pack(pady=5)
 
@@ -50,7 +77,10 @@ entry = tk.Entry(root, width=40)
 entry.pack(pady=5)
 
 install_button = tk.Button(root, text="Install", command=install_package)
-install_button.pack(pady=10)
+install_button.pack(pady=5)
+
+show_packages_button = tk.Button(root, text="Show Installed Packages", command=show_installed_packages)
+show_packages_button.pack(pady=5)
 
 output_text = scrolledtext.ScrolledText(root, height=15, width=60, wrap=tk.WORD)
 output_text.pack(padx=10, pady=5)
