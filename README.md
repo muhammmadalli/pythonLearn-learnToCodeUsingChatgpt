@@ -27,6 +27,6 @@ pyinstall is dead, long live pip!: [text](https://ianbicking.org/blog/2008/10/py
 *Building program from simpler to complex incrementally*
 1. ChatGPT could introduce new error in the previous working code\
 &emsp;Must take step-by-steo verification of the code. *VERSION CONTROL WILL HELP A LOT*
-2. MORE THOUGHT IS REQUIRED BY THE PROGRAMMER\  
+2. MORE THOUGHT IS REQUIRED BY THE PROGRAMMER  
 &emsp;Promrammer is to use his intelligence for breaking down and integrating the modules
 3. Overall time taken is more.
