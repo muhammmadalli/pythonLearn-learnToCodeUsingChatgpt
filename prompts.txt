@@ -1,1 +1,5 @@
 Modify the program to show only package names. 
+The advantages of least-to-most strategy. 
+It gives ChatGPT simpler problems to solve. 
+It gives you working code to fall back on, if a later step fails. 
+It gets you at least some of the capability you want, even if ChatGPT can't deliver everything. 
