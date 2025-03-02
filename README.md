@@ -30,3 +30,8 @@ pyinstall is dead, long live pip!: [text](https://ianbicking.org/blog/2008/10/py
 2. MORE THOUGHT IS REQUIRED BY THE PROGRAMMER  
 &emsp;Promrammer is to use his intelligence for breaking down and integrating the modules
 3. Overall time taken is more.
+
+#### The advantages of least-to-most strategy. 
+1. It gives ChatGPT simpler problems to solve. 
+2. It gives you working code to fall back on, if a later step fails. 
+3. It gets you at least some of the capability you want, even if ChatGPT can't deliver everything. 
