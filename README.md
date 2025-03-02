@@ -1,3 +1,4 @@
+# LEARN TO CODE USING CHATGPT
 This repo contains all the exercises done during the course **LEARN TO CODE USING CHATGPT** done on *Quantic*.\
 \
 ChatGPT can be a tool of astronomical assistance for programmers - with the right prompt.\
@@ -16,3 +17,16 @@ https://github.com/muhammmadalli/learnPython-HelloWorld - **Exercise 1**\
 https://github.com/muhammmadalli/learnPython-SortExpensesAndSumThem - **Exercise 2**\
 https://github.com/muhammmadalli/learnPython-websiteLivenessCheck - **Exercise 3**\
 https://github.com/muhammmadalli/learnPython-extractSentencesHavingAKeyword - **Exercise 4**\
+
+
+## **BELOW ARE THE LESSONS LEARNT**
+a repository of all python projects and libraries: [text](https://pypi.org/)\
+pyinstall is dead, long live pip!: [text](https://ianbicking.org/blog/2008/10/pyinstall-is-dead-long-live-pip.html)\
+
+### LEAST-TO-MOST STRATEGY
+*Building program from simpler to complex incrementally*
+1. ChatGPT could introduce new error in the previous working code\
+&emsp;Must take step-by-steo verification of the code. *VERSION CONTROL WILL HELP A LOT*
+2. MORE THOUGHT IS REQUIRED BY THE PROGRAMMER\ 
+&emsp;Promrammer is to use his intelligence for breaking down and integrating the modules
+3. Overall time taken is more.
