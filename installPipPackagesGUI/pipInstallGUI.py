@@ -48,7 +48,7 @@ def show_installed_packages():
     def run_list():
         try:
             process = subprocess.Popen(
-                ["pip", "list"],
+                ["pip", "list", "--format=freeze"],  # Get package names only
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 text=True
@@ -56,8 +56,10 @@ def show_installed_packages():
 
             output_text.insert(tk.END, "Installed Packages:\n")
             for line in process.stdout:
-                output_text.insert(tk.END, line)
-                output_text.yview(tk.END)
+                if "==" in line:
+                    package_name = line.split("==")[0]  # Extract package name only
+                    output_text.insert(tk.END, f"{package_name}\n")
+                    output_text.yview(tk.END)
 
         except Exception as e:
             output_text.insert(tk.END, f"\nError: {str(e)}\n")
