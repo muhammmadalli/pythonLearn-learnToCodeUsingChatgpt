@@ -35,3 +35,6 @@ pyinstall is dead, long live pip!: [text](https://ianbicking.org/blog/2008/10/py
 1. It gives ChatGPT simpler problems to solve. 
 2. It gives you working code to fall back on, if a later step fails. 
 3. It gets you at least some of the capability you want, even if ChatGPT can't deliver everything. 
+
+### Prompt - Question Refinement by asking ChatGPT
+I want an app that *does some function*. Tell me what I should include in my prompt to you. Don't write any code at this point.
