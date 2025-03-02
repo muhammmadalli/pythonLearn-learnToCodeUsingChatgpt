@@ -39,8 +39,8 @@ pyinstall is dead, long live pip!: [text](https://ianbicking.org/blog/2008/10/py
 ### Prompt - Question Refinement by asking ChatGPT
 I want an app that *does some function*. Tell me what I should include in my prompt to you. Don't write any code at this point.
 
-# NOTES ON OOP
-OOP encapsulates attributes and methods together in objects. This encapsulation makes organizing complex code easier. It allows programmers to divide and conquer a complex task by breaking it into smaller parts, each of which can be developed and tested separately.   
+# NOTES ON OOP (Object-oriented Programming)
+OOP encapsulates attributes and methods together in objects. This encapsulation makes organizing complex code easier. It allows programmers to divide and conquer a complex task by breaking it into smaller parts, each of which can be developed and tested separately. Following are the major sub-components of OOP.  
 1. **CONTRUCTOR** creates an instance, or object which was not previously there.
 2. **ATTRIBUTES** contain data in the class.
 3. **METHODS** work on and manipulate the attributes.
