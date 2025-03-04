@@ -56,6 +56,8 @@ OOP encapsulates attributes and methods together in objects. This encapsulation 
 
 
 # Notes on Debugging Techniques. 
+| Type of Error                                                                                                              | Technique Applied |
+|  ------                                                                                                                    | ------- |
 | It's early in the debugging process, and you get a trace back.                                                             | **Paste the trace back** in prompt.                               | 
 | Has been getting closer to the correct code. But there is an apparently minor logic error.                                 | **Explain the problem**.                                          | 
 | ChatGPT isn't getting closer to the correct code. But you think you might be able to recognize a problem in its logic.     | Ask ChatGPT to **explain the approach**.                          | 
