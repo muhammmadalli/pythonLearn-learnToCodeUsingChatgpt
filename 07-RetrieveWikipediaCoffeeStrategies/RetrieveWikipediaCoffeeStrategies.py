@@ -54,11 +54,8 @@ def main():
                             # Find the parent element of the title
                             section = title.find_parent()
 
-                            # Extract all paragraphs within the section
-                            paragraphs = section.find_all(['p', 'ul', 'ol'])
-
-                            # Extract and join the text of all paragraphs
-                            section_text = "\n".join(paragraph.get_text().strip() for paragraph in paragraphs)
+                            # Extract all text within the section
+                            section_text = section.get_text().strip()
 
                             # Write the brand name, section title, and section text to strategies.txt
                             strategies_file.write(f"Brand Name: {brand_name}\n")
