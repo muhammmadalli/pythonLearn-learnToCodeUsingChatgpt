@@ -56,8 +56,8 @@ OOP encapsulates attributes and methods together in objects. This encapsulation 
 
 
 # Notes on Debugging Techniques. 
-| It's early in the debugging process, and you get a trace back. | **Paste the trace back** in prompt. | 
-| Has been getting closer to the correct code. But there is an apparently minor logic error. | **Explain the problem**. | 
-| ChatGPT isn't getting closer to the correct code. But you think you might be able to recognize a problem in its logic. | Ask ChatGPT to **explain the approach**. | 
-| You've isolated the problem to a single line of code that involves a call to an external library. | **Search the Internet** for correct syntax and calling method. | 
-| ChatGPT isn't getting closer to the correct code. And you are unable to pinpoint the problem. | Ask ChatGPT to **change the approach**. | 
+1. | It's early in the debugging process, and you get a trace back.                                                             | **Paste the trace back** in prompt.                               | 
+2. | Has been getting closer to the correct code. But there is an apparently minor logic error.                                 | **Explain the problem**.                                          | 
+3. | ChatGPT isn't getting closer to the correct code. But you think you might be able to recognize a problem in its logic.     | Ask ChatGPT to **explain the approach**.                          | 
+4. | You've isolated the problem to a single line of code that involves a call to an external library.                          | **Search the Internet** for correct syntax and calling method.    | 
+5. | ChatGPT isn't getting closer to the correct code. And you are unable to pinpoint the problem.                              | Ask ChatGPT to **change the approach**.                           | 
