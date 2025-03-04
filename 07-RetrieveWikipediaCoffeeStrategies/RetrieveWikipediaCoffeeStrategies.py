@@ -1,7 +1,10 @@
 import wikipediaapi
 
 # Create a Wikipedia API object with a user-agent
-wiki_wiki = wikipediaapi.Wikipedia("en", user_agent="your-app-name/1.0")
+wiki_wiki = wikipediaapi.Wikipedia("en")
+
+# Set the user-agent for the API object
+wiki_wiki.user_agent = "your-app-name/1.0"
 
 # Function to check if a page has a section containing specific keywords
 def has_keywords_section(page, keywords):
