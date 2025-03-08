@@ -3,7 +3,7 @@ from datetime import datetime
 import pytz
 
 # Import the function to be tested
-from timezone_converter import timezone_converter  # Replace with your actual module name
+from timezone_converter import convert_timezone  # Replace with your actual module name
 
 class TestConvertTimezone(unittest.TestCase):
 
