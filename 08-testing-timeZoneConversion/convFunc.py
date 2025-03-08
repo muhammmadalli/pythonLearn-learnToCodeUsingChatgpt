@@ -10,16 +10,20 @@ def convert_timezone(time_to_convert: datetime, from_tz: str, to_tz: str) -> dat
     :param to_tz: The target time zone as a string (e.g., "Asia/Tokyo").
     :return: The converted datetime object in the target time zone.
     """
-    from_timezone = pytz.timezone(from_tz)
-    to_timezone = pytz.timezone(to_tz)
+    try:
+        from_timezone = pytz.timezone(from_tz)
+        to_timezone = pytz.timezone(to_tz)
 
-    # Localize the given time to the source time zone
-    localized_time = from_timezone.localize(time_to_convert)
+        # Localize the given time to the source time zone
+        localized_time = from_timezone.localize(time_to_convert)
 
-    # Convert to the target time zone
-    converted_time = localized_time.astimezone(to_timezone)
+        # Convert to the target time zone
+        converted_time = localized_time.astimezone(to_timezone)
 
-    return converted_time
+        return converted_time
+
+    except pytz.exceptions.UnknownTimeZoneError:
+        return "Invalid time zone provided"
 
 # Example Usage:
 if __name__ == "__main__":
