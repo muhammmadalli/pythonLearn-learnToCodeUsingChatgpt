@@ -22,7 +22,12 @@ class TestReadSalesData(unittest.TestCase):
         df2.to_excel(os.path.join(self.test_dir, 'test_file2.xlsx'), index=False)
 
     def tearDown(self):
-        # Remove the temporary test directory and files
+        # Remove the temporary test files
+        for file_name in os.listdir(self.test_dir):
+            file_path = os.path.join(self.test_dir, file_name)
+            os.remove(file_path)
+
+        # Remove the temporary test directory
         os.rmdir(self.test_dir)
     
     def test_read_sales_data(self):
