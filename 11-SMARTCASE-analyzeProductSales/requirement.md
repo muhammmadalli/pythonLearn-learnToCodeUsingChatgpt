@@ -26,7 +26,7 @@ I have a directory named sales with multiple Excel files. Each file has two colu
 ### 2\. Now we also want to test the function. 
 > Design test cases and a program to unit test the read_sales_data function.
 
-### 3\.
+### 3\. Write the required Function
 > Write a function that compares the number of products sold for products that appear in multiple files. Using the data returned by read_sales_data, it should:
 > 1. Find the average sales for that product across the files it's in.
 > 2. Find any files where the sales are more than 10% different than the average.
