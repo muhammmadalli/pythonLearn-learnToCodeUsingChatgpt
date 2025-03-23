@@ -14,9 +14,9 @@ def validate_email(email):
     else:
         return False  # Email is not valid
 
-# Replace "myemail@hotmail.com" with the email address you want to check
-email = "myemail@hotmail.com"
+# Prompt the user to enter an email address
+email = input("Enter an email address: ")
 
-# Call the validate_email function and display the result
+# Call the validate_email function with the user-provided email and display the result
 result = validate_email(email)
 print("The result of validation checking:", result)
