@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 # Import the function you want to test
-from read_sales_data import read_sales_data  # Replace 'your_module' with the actual name of your Python module
+from analyze_data import read_sales_data  # Replace 'your_module' with the actual name of your Python module
 
 class TestReadSalesData(unittest.TestCase):
     def setUp(self):
