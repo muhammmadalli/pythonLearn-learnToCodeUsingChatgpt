@@ -31,3 +31,7 @@ I have a directory named sales with multiple Excel files. Each file has two colu
 > 1. Find the average sales for that product across the files it's in.
 > 2. Find any files where the sales are more than 10% different than the average.
 > 3. Return the product, the average, and the files where the sales vary by 10%.
+
+### 4\. Provided the Spreadsheets to the Program
+> I've put read_sales_data and compare_product_sales in a file named analyze_data.py. Write a program that uses the functions to highlight in yellow any product in one of the Excel files with sales differing by 10%.
+
