@@ -1,4 +1,5 @@
 import openpyxl
+import os
 from openpyxl.styles import PatternFill
 from analyze_data import read_sales_data, compare_product_sales
 
@@ -9,8 +10,11 @@ def highlight_sales_difference(excel_file_path):
 
     # Loop through each Excel file and highlight cells with differing sales in yellow
     for file_name, df in sales_data.items():
+        # Construct the full file path using os.path.join
+        file_path = os.path.join(excel_file_path, file_name)
+
         # Open the Excel file using openpyxl
-        workbook = openpyxl.load_workbook(file_name)
+        workbook = openpyxl.load_workbook(file_path)
         sheet = workbook.active
 
         # Get the column indices for 'Product' and 'Sold'
@@ -35,7 +39,7 @@ def highlight_sales_difference(excel_file_path):
                 sold_cell.fill = yellow_fill
 
         # Save the modified Excel file
-        workbook.save(file_name)
+        workbook.save(file_path)
 
 if __name__ == "__main__":
     directory_path = "sales"  # Replace with the path to your sales directory
