@@ -1,9 +1,9 @@
 import re  # Import the regular expression module
 
-# Define a function to perform the email validation
+# Define a function to perform email validation
 def validate_email(email):
-    # Define the regular expression pattern for a valid email address
-    pattern = r'^[\w+\.]+@\w+\.\w+$'
+    # Define a regular expression pattern for a valid email address
+    pattern = r'^[\w\.-]+@[\w\.-]+$'
     
     # Create a regular expression object and set the IgnoreCase flag to True
     myReg = re.compile(pattern, re.IGNORECASE)
