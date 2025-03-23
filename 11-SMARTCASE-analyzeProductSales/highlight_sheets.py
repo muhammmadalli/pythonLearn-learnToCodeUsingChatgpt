@@ -17,6 +17,9 @@ def highlight_sales_difference(excel_file_path):
         workbook = openpyxl.load_workbook(file_path)
         sheet = workbook.active
 
+        # Initialize a row counter
+        current_row = 2  # Start from row 2 (assuming the header is in row 1)
+
         # Get the column indices for 'Product' and 'Sold'
         product_column = None
         sold_column = None
@@ -34,9 +37,12 @@ def highlight_sales_difference(excel_file_path):
 
             if product in comparison_result and file_name in comparison_result[product]['varying_files']:
                 # Highlight the 'Sold' cell in yellow
-                sold_cell = sheet.cell(row=row[0].row, column=sold_column)
+                sold_cell = sheet.cell(row=current_row, column=sold_column)
                 yellow_fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
                 sold_cell.fill = yellow_fill
+
+            # Increment the row counter
+            current_row += 1
 
         # Save the modified Excel file
         workbook.save(file_path)
